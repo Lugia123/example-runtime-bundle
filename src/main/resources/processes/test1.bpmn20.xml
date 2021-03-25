@@ -6,7 +6,7 @@
       <bpmn2:outgoing>SequenceFlow_0hi8n5p</bpmn2:outgoing>
     </bpmn2:startEvent>
     <bpmn2:sequenceFlow id="SequenceFlow_0hi8n5p" sourceRef="Event_1" targetRef="Task_1sd0kdo" />
-    <bpmn2:userTask id="Task_1sd0kdo" name="form1process" activiti:formKey="form1" activiti:candidateGroups="hruser">
+    <bpmn2:userTask id="Task_1sd0kdo" name="form1process" activiti:formKey="form1" activiti:candidateUsers="testuser,hruser">
       <bpmn2:incoming>SequenceFlow_0hi8n5p</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_1gz8p2y</bpmn2:outgoing>
     </bpmn2:userTask>
