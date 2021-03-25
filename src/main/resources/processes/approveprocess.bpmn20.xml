@@ -28,19 +28,19 @@
       <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression">${status == "ng"}</bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
     <bpmn2:sequenceFlow id="SequenceFlow_1plmr0v" sourceRef="Task_182t6mg" targetRef="ExclusiveGateway_1ez71w7" />
-    <bpmn2:userTask id="Task_1eebcek" name="请假" activiti:candidateUsers="hruser,hrtest">
+    <bpmn2:userTask id="Task_1eebcek" name="AskForLeaveTask" activiti:candidateUsers="hruser,hrtest">
       <bpmn2:incoming>SequenceFlow_1ij2z1w</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_1l09qfp</bpmn2:outgoing>
     </bpmn2:userTask>
-    <bpmn2:userTask id="Task_1r8dfjx" name="审批" activiti:candidateUsers="${leaders}">
+    <bpmn2:userTask id="Task_1r8dfjx" name="ApproveTask" activiti:candidateUsers="${leaders}">
       <bpmn2:incoming>SequenceFlow_0ile64y</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_03zzmch</bpmn2:outgoing>
     </bpmn2:userTask>
-    <bpmn2:userTask id="Task_0vykw8q" name="通过" activiti:candidateUsers="${submituser}">
+    <bpmn2:userTask id="Task_0vykw8q" name="ReviewTask" activiti:candidateUsers="${submituser}">
       <bpmn2:incoming>SequenceFlow_119dxef</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_1ntr30v</bpmn2:outgoing>
     </bpmn2:userTask>
-    <bpmn2:userTask id="Task_182t6mg" name="驳回" activiti:candidateUsers="${submituser}">
+    <bpmn2:userTask id="Task_182t6mg" name="FinishTask" activiti:candidateUsers="${submituser}">
       <bpmn2:incoming>SequenceFlow_1n62frn</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_1plmr0v</bpmn2:outgoing>
     </bpmn2:userTask>
