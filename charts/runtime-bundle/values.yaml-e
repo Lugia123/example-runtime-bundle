@@ -63,7 +63,7 @@ javaOpts:
 #registryPullSecrets: private-registry-secret
 image:
   repository: /activiti/runtime-bundle
-  tag: 
+  tag: 7.0.0.SR1
   pullPolicy: IfNotPresent
 service:
   type: ClusterIP
